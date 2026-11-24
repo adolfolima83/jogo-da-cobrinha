@@ -1,48 +1,50 @@
-<!doctype html>
-<html lang="pt-BR" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>Modelo de Jogo — Jogos VR</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <header class="top">
-        <div>
-          <span class="kicker">Modelo</span>
-          <h1 id="title">Clique no Alvo</h1>
-          <p class="subtitle">Troque este jogo pelo seu. O contrato já está pronto.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobra Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container-jogo">
+    <header class="cabecalho">
+      <div class="info-status">
+        <span>Rodada: <strong id="texto-rodada">1/10</strong></span>
+        <span>Pontos: <strong id="texto-pontos">0</strong></span>
+      </div>
+      <div class="painel-conta" aria-live="polite">
+        <span id="texto-conta">Pronto para começar?</span>
+      </div>
+    </header>
+
+    <div class="area-lousa">
+      <canvas id="tela-jogo" width="400" height="400" aria-label="Tabuleiro da lousa"></canvas>
+      
+      <!-- Camada de mensagens (Início, Explicação da rodada e Fim) -->
+      <div id="overlay-mensagem" class="overlay">
+        <div class="caixa-aviso">
+          <h1 id="titulo-aviso">Cobra Inteligente</h1>
+          <p id="descricao-aviso">
+            Guie a cobrinha até a maçã com o resultado certo da conta!
+            Use as setas do teclado ou os botões abaixo.
+          </p>
+          <button id="botao-acao" class="botao-principal">Começar Jogo</button>
         </div>
-        <button id="restart" class="btn" type="button">Reiniciar</button>
-      </header>
-
-      <main>
-        <div class="hud">
-          <span class="pill">Alvos: <strong id="score">0</strong>/<span id="total">10</span></span>
-          <span class="pill">Tempo: <strong id="timer">0,0s</strong></span>
-        </div>
-
-        <div id="board" class="board" aria-label="Área do jogo">
-          <p id="start-hint" class="start-hint">Clique no alvo para começar</p>
-        </div>
-      </main>
-
-      <footer class="bottom">
-        <p>Este é o arquivo <code>game.js</code>. Leia os comentários e adapte.</p>
-      </footer>
-    </div>
-
-    <div id="result" class="overlay" hidden>
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="result-title">
-        <div class="modal-icon" aria-hidden="true">🎯</div>
-        <h2 id="result-title">Muito bem!</h2>
-        <p id="result-text">Você concluiu o jogo.</p>
-        <button id="play-again" class="btn btn-primary full" type="button">Jogar de novo</button>
       </div>
     </div>
 
-    <script src="game.js"></script>
-  </body>
+    <!-- Controles para celular e toque na tela -->
+    <section class="controles-direcionais" aria-label="Controles da cobrinha">
+      <button class="btn-seta" data-direcao="CIMA" aria-label="Mover para cima">▲</button>
+      <div class="linha-meio">
+        <button class="btn-seta" data-direcao="ESQUERDA" aria-label="Mover para a esquerda">◀</button>
+        <button class="btn-seta" data-direcao="BAIXO" aria-label="Mover para baixo">▼</button>
+        <button class="btn-seta" data-direcao="DIREITA" aria-label="Mover para a direita">▶</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
 </html>

@@ -1,16 +1,16 @@
 {
-  "slug": "meu-jogo",
-  "title": "Nome do meu jogo",
-  "author": "Seu nome",
-  "authorClass": "Sua turma",
-  "discipline": "Matemática",
-  "grades": ["6º", "7º"],
-  "tags": ["palavra-chave", "outra-palavra"],
-  "description": "Uma frase curta que explica o que o jogo ensina.",
-  "instructions": "Como jogar, em uma ou duas frases.",
-  "duration": 5,
+  "slug": "cobra-inteligente",
+  "title": "Cobra Inteligente",
+  "author": "Adolfo Lima",
+  "authorClass": "9C",
+  "discipline": "Robótica / Matemática",
+  "grades": ["6º ano", "7º ano", "8º ano", "9º ano"],
+  "tags": ["matemática", "contagem", "cálculo", "cobrinha", "raciocínio"],
+  "description": "Guie a cobrinha pela lousa escolar e coma a maçã com o resultado certo das contas de matemática.",
+  "instructions": "Use as setas do teclado (ou W, A, S, D) no computador, ou os botões direcionais na tela do celular, para levar a cobra até o número correto.",
+  "duration": "2-4 min",
   "version": "1.0.0",
   "entry": "index.html",
   "cover": "cover.svg",
-  "createdAt": "2026-11-02"
+  "createdAt": "2026-11-24"
 }
